@@ -221,7 +221,7 @@ namespace dsmr
         const char *unit_start = ++num_end; // skip *
         while (num_end < end && *num_end != ')' && *unit)
         {
-          if (*num_end++ != *unit++)
+          if (tolower(*num_end++) != tolower(*unit++))
             return res.fail(INVALID_UNIT, unit_start);
         }
         if (*unit)
