@@ -465,26 +465,26 @@ namespace dsmr
     DEFINE_FIELD(current_sum, FixedValue, ObisId(1, 0, 90, 7, 0), FixedField, units::A, units::mA);
 
     /*
- * LUX and Lithuania
+ * LUX, Lithuania and Sweden
  */
-    /* TODO: by IEC 62056 unit's shoudl be kvar, safe to change? */
+    /* IEC 62056 define the unit of reactive power as "kvar". Some meters e.g. L+G E360 uses mixed case "kVar" */
     /* Instantaneous reactive power L1 (+Q) in W resolution */
-    DEFINE_FIELD(reactive_power_delivered_l1, FixedValue, ObisId(1, 0, 23, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_delivered_l1, FixedValue, ObisId(1, 0, 23, 7, 0), FixedField, units::kvar, units::kvar);
     /* Instantaneous reactive power L2 (+Q) in W resolution */
-    DEFINE_FIELD(reactive_power_delivered_l2, FixedValue, ObisId(1, 0, 43, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_delivered_l2, FixedValue, ObisId(1, 0, 43, 7, 0), FixedField, units::kvar, units::kvar);
     /* Instantaneous reactive power L3 (+Q) in W resolution */
-    DEFINE_FIELD(reactive_power_delivered_l3, FixedValue, ObisId(1, 0, 63, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_delivered_l3, FixedValue, ObisId(1, 0, 63, 7, 0), FixedField, units::kvar, units::kvar);
 
     /*
- * LUX and Lithuania
+ * LUX, Lithuania and Sweden
  */
-    /* TODO: by IEC 62056 unit's shoudl be kvar, safe to change? */
+    /* IEC 62056 define the unit of reactive power as "kvar". Some meters e.g. L+G E360 uses mixed case "kVar" */
     /* Instantaneous reactive power L1 (-Q) in W resolution */
-    DEFINE_FIELD(reactive_power_returned_l1, FixedValue, ObisId(1, 0, 24, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_returned_l1, FixedValue, ObisId(1, 0, 24, 7, 0), FixedField, units::kvar, units::kvar);
     /* Instantaneous reactive power L2 (-Q) in W resolution */
-    DEFINE_FIELD(reactive_power_returned_l2, FixedValue, ObisId(1, 0, 44, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_returned_l2, FixedValue, ObisId(1, 0, 44, 7, 0), FixedField, units::kvar, units::kvar);
     /* Instantaneous reactive power L3 (-Q) in W resolution */
-    DEFINE_FIELD(reactive_power_returned_l3, FixedValue, ObisId(1, 0, 64, 7, 0), FixedField, units::none, units::none);
+    DEFINE_FIELD(reactive_power_returned_l3, FixedValue, ObisId(1, 0, 64, 7, 0), FixedField, units::kvar, units::kvar);
 
     /* Apparent instantaneous power (+S) in kVA resolution */
     DEFINE_FIELD(apparent_delivery_power, FixedValue, ObisId(1, 0, 9, 7, 0), FixedField, units::kVA, units::VA);
